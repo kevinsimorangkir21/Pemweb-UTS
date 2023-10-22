@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration | Ruang Resmi (RR) </title>
+    <link rel="stylesheet" href="public/form.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+        <h2 align="center">Ruang Resmi.</h2>
+    </div>
+        <header>Registration</header>
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+                    <div class="fields" action="proses.php" method="GET">
+                        <div class="input-field">
+                            <label>Nama Mahasiswa</label>
+                            <input id="nama" type="text" placeholder="Enter your name" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Nomor Induk Mahasiswa</label>
+                            <input id="nim" type="date" placeholder="Enter NIM" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Program Studi</label>
+                            <input id="program-studi" type="text" placeholder="Enter your study program" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input id="email"type="number" placeholder="Enter email" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Jenis Kelamin</label>
+                            <select id="jenis_kelamin" name="jenis_kelamin" placeholder="Enter your sex" required>
+                                <option disabled selected>Pilih</option>
+                                <option>Laki - Laki</option>
+                                <option>Perempuan</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label>Password</label>
+                            <input type="password"  id="password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Tanggal Lahir</label>
+                            <input type="date" id="tgl_lahir" placeholder="Enter your date" required>
+                        </div>
+                        <div class="input-field">
+                            <label>Alamat</label>
+                            <input type="text" id="alamat" placeholder="Enter your address" required>
+                        </div>
+                    </div>
+                        <div class="buttons">
+                            <div class="backBtn">
+                                <i class="uil uil-navigator"></i>
+                                <span class="btnText">Back</span>
+                            </div>
+        
+                            <button class="sumbit">
+                                <span class="btnText">Submit</span>
+                                <i class="uil uil-navigator"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        </form>
+    </div>
+    
+    <script src="form.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+
+            // Cek apakah ada parameter nama pada URL
+            if (urlParams.has('nama')) {
+                const nama = urlParams.get('nama');
+                const nim = urlParams.get('nim');
+                const programStudi = urlParams.get('program_studi');
+                const email = urlParams.get('email');
+                const password = urlParams.get('password');
+                const jenisKelamin = urlParams.get('jenis_kelamin');
+                const tanggalLahir = urlParams.get('tgl_lahir');
+                const alamat = urlParams.get('alamat');
+
+                // Tambahkan data yang disubmit ke tabel
+                const newRow = document.createElement('tr');
+                newRow.innerHTML = `
+                <td>${nama}</td>
+                <td>${nim}</td>
+                <td>${programStudi}</td>
+                <td>${email}</td>
+                <td>${password}</td>
+                <td>${jenisKelamin}</td>
+                <td>${tanggalLahir}</td>
+                <td>${alamat}</td>
+            `;
+
+                document.querySelector('#mahasiswa-table tbody').appendChild(newRow);
+            }
+    </script>
+</body>
+
+</html>
