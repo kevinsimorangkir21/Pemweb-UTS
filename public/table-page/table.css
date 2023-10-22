@@ -24,21 +24,23 @@ table caption {
 
 table tr {
     background: #FFEBCD;
-    border: 1px solid green;
+    border: 1px solid rgb(0, 0, 0);
     padding: .35em;
 }
 
-table th,
-table td {
-    padding: .625em;
-    text-align: center;
+tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fff;
 }
 
 table th {
     font-size: .85em;
     letter-spacing: .1em;
     text-transform: uppercase;
-    background: #483D8B;
+    background: #000000;
     color: white;
 }
 

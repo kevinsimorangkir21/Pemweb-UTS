@@ -270,10 +270,11 @@ button {
 }
 
 footer {
-    width: 100%;
-    background-color: var(--primary-color);
-    height: 12px;
-    margin-top: 8rem;
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+    clear: both;
 }
 
 /* ==== MEDIA QURIES FOR RESPONSIVE DESIGN ==== */
