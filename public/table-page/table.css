@@ -48,6 +48,60 @@ table td img {
     text-align: center;
 }
 
+.container form button,
+.backBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 25px 0;
+    background-color: #000000;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+form .btnText {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+form button:hover {
+    background-color: #000000;
+}
+
+form button i,
+form .backBtn i {
+    margin: 0 6px;
+}
+
+form .backBtn i {
+    transform: rotate(180deg);
+}
+
+form .buttons {
+    display: flex;
+    align-items: center;
+}
+
+form .buttons button,
+.backBtn {
+    margin-right: 14px;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    clear: both;
+}
+
 @media screen and (max-width: 600px) {
     .toggle_btn {
             display: none;

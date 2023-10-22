@@ -178,6 +178,14 @@ form .buttons button,
     margin-right: 14px;
 }
 
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    clear: both;
+}
+
 @media (max-width: 750px) {
     .container form {
         overflow-y: scroll;
